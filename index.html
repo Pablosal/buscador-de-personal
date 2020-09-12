@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtrar Usuarios</title>
+    <style>
+      .seleccionado {
+        height: 36.5px;
+        width: 1043px;
+        padding: 6px !important;
+        border: none !important;
+      }
+      .seleccionado:hover {
+        cursor: pointer;
+        background-color: #3399ff;
+        color: white;
+      }
+      #lista_match {
+        position: absolute;
+        top: 36px;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: white;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/flatly/bootstrap.min.css"
+      integrity="sha384-mhpbKVUOPCSocLzx2ElRISIORFRwr1ZbO9bAlowgM5kO7hnpRBe+brVj8NNPUiFs"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- As a link -->
+    <nav class="navbar navbar-light bg-light mb-4">
+      <button id="verTodos" class="navbar-brand btn text-center">
+        Ver Todos
+      </button>
+    </nav>
+
+    <form id="formulario" class="input-group flex-wrap container">
+      <input
+        type="text"
+        class="form-control"
+        id="inputHandler"
+        placeholder="Nombre"
+        aria-label="Username"
+        aria-describedby="addon-wrapping"
+      />
+      <div id="lista_match"></div>
+      <div class="input-group-prepend">
+        <input type="submit" class="btn btn-success" />
+      </div>
+    </form>
+    <main
+      id="intervaloDeUsuarios"
+      class="row d-flex flex-wrap justify-content-center"
+    ></main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
